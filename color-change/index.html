@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Change</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-container{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .heading{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1 class="heading">Color Scheme Switcher</h1>
+    <div class="container">
+        <div class="sub-container" id="grey" style="background-color: grey;"></div>
+        <div class="sub-container" id="white" style="background-color: white;"></div>
+        <div class="sub-container" id="blue" style="background-color: blue;"></div>
+        <div class="sub-container" id="yellow" style="background-color: yellow;"></div>
+    </div>
+    <h2 class="heading">Try clicking on one of the colors abouve <span>to change the background color of this page</span></h2>
+</body>
+<script src="ind.js"></script>
+</html>

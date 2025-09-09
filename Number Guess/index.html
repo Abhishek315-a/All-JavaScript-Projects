@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #121212;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+      /* Wrapper */
+      #wrapper {
+        background: #2c2c2c;
+        padding: 30px;
+        border-radius: 10px;
+        width: 350px;
+        text-align: center;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+      }
+
+      h1 {
+        margin-bottom: 15px;
+        font-size: 22px;
+        color: #ffcc00;
+      }
+
+      p {
+        margin: 5px 0;
+        font-size: 14px;
+      }
+
+      /* Form */
+      .form {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      label {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .guessField {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+
+      .guessSubmit {
+        padding: 10px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .guessSubmit:hover {
+        background: #333;
+      }
+
+      /* Result */
+      .resultParas {
+        margin-top: 20px;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      .guesses,
+      .lastResult,
+      .lowOrHi {
+        font-weight: bold;
+        color: #ffcc00;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Number guessing game</h1>
+      <p>Try and guess a random number between 1 and 100.</p>
+      <p>You have 10 attempts to guess the right number.</p>
+
+      <form class="form">
+        <label for="guessField">Guess a number:</label>
+        <input type="text" id="guessField" class="guessField" />
+        <input
+          type="submit"
+          id="subt"
+          value="Submit guess"
+          class="guessSubmit"
+        />
+      </form>
+
+      <div class="resultParas">
+        <p>Previous Guesses: <span class="guesses"></span></p>
+        <p>Guesses Remaining: <span class="lastResult">10</span></p>
+        <p class="lowOrHi"></p>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
